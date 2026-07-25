@@ -33,6 +33,25 @@ winget install --manifest .\fonts\y\yuru7\HackGen\2.10.0
 
 From WSL, copy the manifest directory to a Windows-readable path first if `winget.exe` cannot read the WSL UNC path directly.
 
+## Inno Setup installer experiment
+
+The `installer/` and `scripts/` directories contain an experimental Inno Setup based installer for testing machine-wide font installation.
+
+Prerequisites:
+
+- Inno Setup 6
+- PowerShell
+
+Build from Windows:
+
+```powershell
+.\scripts\build-inno.ps1
+```
+
+The build script downloads the upstream HackGen `v2.10.0` ZIP, verifies its SHA256 hash, extracts the TTF files under `vendor/`, and writes the installer under `dist/`.
+
+The generated installer requires administrator privileges and installs the fonts to Windows' automatic fonts location through Inno Setup's `{autofonts}` destination.
+
 ## License
 
 The manifests in this repository are licensed under the MIT License.
