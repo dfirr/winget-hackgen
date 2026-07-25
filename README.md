@@ -18,7 +18,7 @@ This repository contains manifests intended for submission to the Windows Packag
 From Windows:
 
 ```powershell
-winget validate .\fonts\y\yuru7\HackGen\2.10.0
+winget validate .\manifests\y\yuru7\HackGen\2.10.0
 ```
 
 To test installation from a local manifest, enable local manifest files from an elevated PowerShell session:
@@ -30,7 +30,7 @@ winget settings --enable LocalManifestFiles
 Then run:
 
 ```powershell
-winget install --manifest .\fonts\y\yuru7\HackGen\2.10.0
+winget install --manifest .\manifests\y\yuru7\HackGen\2.10.0
 ```
 
 From WSL, copy the manifest directory to a Windows-readable path first if `winget.exe` cannot read the WSL UNC path directly.
