@@ -11,12 +11,24 @@ This repository contains manifests intended for submission to the Windows Packag
 - Upstream project: <https://github.com/yuru7/HackGen>
 - Upstream release: <https://github.com/yuru7/HackGen/releases/tag/v2.10.0>
 
-## Validation
+## Validation and local install
 
 From Windows:
 
 ```powershell
 winget validate .\fonts\y\yuru7\HackGen\2.10.0
+```
+
+To test installation from a local manifest, enable local manifest files from an elevated PowerShell session:
+
+```powershell
+winget settings --enable LocalManifestFiles
+```
+
+Then run:
+
+```powershell
+winget install --manifest .\fonts\y\yuru7\HackGen\2.10.0
 ```
 
 From WSL, copy the manifest directory to a Windows-readable path first if `winget.exe` cannot read the WSL UNC path directly.
