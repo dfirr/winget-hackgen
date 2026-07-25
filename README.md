@@ -60,6 +60,14 @@ The winget manifest expects the installer to be published as a GitHub Releases a
 https://github.com/dfirr/winget-hackgen/releases/download/v2.10.0/HackGen-2.10.0-Setup.exe
 ```
 
+Installer SHA256:
+
+```text
+A1FABFAE036E4688DE76B3FC26CE041338F046C66598EEB57BBFD2F816FFAFED
+```
+
+The installer is not code-signed. Windows Defender SmartScreen may warn that the app is unrecognized until the binary has sufficient reputation. Verify the SHA256 hash before running the installer directly.
+
 ## License
 
 The manifests in this repository are licensed under the MIT License.
