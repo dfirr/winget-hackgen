@@ -4,6 +4,8 @@ Windows Package Manager manifests for HackGen, a Japanese programming font devel
 
 This repository contains manifests intended for submission to the Windows Package Manager Community Repository.
 
+Packaging decisions and observed WinGet font behavior are documented in [docs/winget-notes.md](docs/winget-notes.md).
+
 ## Package
 
 - Package identifier: `yuru7.HackGen`
